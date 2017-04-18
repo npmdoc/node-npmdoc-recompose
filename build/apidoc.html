@@ -1,0 +1,3362 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/acdlite/recompose"
+
+    >recompose (v0.23.1)</a>
+</h1>
+<h4>A React utility belt for function components and higher-order components</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose">module recompose</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">recompose.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.branch">
+            function <span class="apidocSignatureSpan">recompose.</span>branch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.componentFromProp">
+            function <span class="apidocSignatureSpan">recompose.</span>componentFromProp
+            <span class="apidocSignatureSpan">(propName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.componentFromStream">
+            function <span class="apidocSignatureSpan">recompose.</span>componentFromStream
+            <span class="apidocSignatureSpan">(propsToVdom)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.compose">
+            function <span class="apidocSignatureSpan">recompose.</span>compose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEagerElement">
+            function <span class="apidocSignatureSpan">recompose.</span>createEagerElement
+            <span class="apidocSignatureSpan">(type, props, children)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEagerFactory">
+            function <span class="apidocSignatureSpan">recompose.</span>createEagerFactory
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEventHandler">
+            function <span class="apidocSignatureSpan">recompose.</span>createEventHandler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createSink">
+            function <span class="apidocSignatureSpan">recompose.</span>createSink
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.defaultProps">
+            function <span class="apidocSignatureSpan">recompose.</span>defaultProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.flattenProp">
+            function <span class="apidocSignatureSpan">recompose.</span>flattenProp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.getContext">
+            function <span class="apidocSignatureSpan">recompose.</span>getContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.getDisplayName">
+            function <span class="apidocSignatureSpan">recompose.</span>getDisplayName
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.hoistStatics">
+            function <span class="apidocSignatureSpan">recompose.</span>hoistStatics
+            <span class="apidocSignatureSpan">(higherOrderComponent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.isClassComponent">
+            function <span class="apidocSignatureSpan">recompose.</span>isClassComponent
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.lifecycle">
+            function <span class="apidocSignatureSpan">recompose.</span>lifecycle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.mapProps">
+            function <span class="apidocSignatureSpan">recompose.</span>mapProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.mapPropsStream">
+            function <span class="apidocSignatureSpan">recompose.</span>mapPropsStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.nest">
+            function <span class="apidocSignatureSpan">recompose.</span>nest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.onlyUpdateForKeys">
+            function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForKeys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.onlyUpdateForPropTypes">
+            function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForPropTypes
+            <span class="apidocSignatureSpan">(BaseComponent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.pure">
+            function <span class="apidocSignatureSpan">recompose.</span>pure
+            <span class="apidocSignatureSpan">(BaseComponent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renameProp">
+            function <span class="apidocSignatureSpan">recompose.</span>renameProp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renameProps">
+            function <span class="apidocSignatureSpan">recompose.</span>renameProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renderComponent">
+            function <span class="apidocSignatureSpan">recompose.</span>renderComponent
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renderNothing">
+            function <span class="apidocSignatureSpan">recompose.</span>renderNothing
+            <span class="apidocSignatureSpan">(_)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setDisplayName">
+            function <span class="apidocSignatureSpan">recompose.</span>setDisplayName
+            <span class="apidocSignatureSpan">(displayName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setObservableConfig">
+            function <span class="apidocSignatureSpan">recompose.</span>setObservableConfig
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setPropTypes">
+            function <span class="apidocSignatureSpan">recompose.</span>setPropTypes
+            <span class="apidocSignatureSpan">(propTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setStatic">
+            function <span class="apidocSignatureSpan">recompose.</span>setStatic
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.shallowEqual">
+            function <span class="apidocSignatureSpan">recompose.</span>shallowEqual
+            <span class="apidocSignatureSpan">(objA, objB)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.shouldUpdate">
+            function <span class="apidocSignatureSpan">recompose.</span>shouldUpdate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.toClass">
+            function <span class="apidocSignatureSpan">recompose.</span>toClass
+            <span class="apidocSignatureSpan">(baseComponent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withContext">
+            function <span class="apidocSignatureSpan">recompose.</span>withContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withHandlers">
+            function <span class="apidocSignatureSpan">recompose.</span>withHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withProps">
+            function <span class="apidocSignatureSpan">recompose.</span>withProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withPropsOnChange">
+            function <span class="apidocSignatureSpan">recompose.</span>withPropsOnChange
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withReducer">
+            function <span class="apidocSignatureSpan">recompose.</span>withReducer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withState">
+            function <span class="apidocSignatureSpan">recompose.</span>withState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.wrapDisplayName">
+            function <span class="apidocSignatureSpan">recompose.</span>wrapDisplayName
+            <span class="apidocSignatureSpan">(BaseComponent, hocName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">recompose.</span>createEagerElementUtil</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">recompose.</span>createHelper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">recompose.</span>isReferentiallyTransparentFunctionComponent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">recompose.</span>omit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">recompose.</span>pick</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.branch">module recompose.branch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.branch.branch">
+            function <span class="apidocSignatureSpan">recompose.</span>branch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.componentFromProp">module recompose.componentFromProp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.componentFromProp.componentFromProp">
+            function <span class="apidocSignatureSpan">recompose.</span>componentFromProp
+            <span class="apidocSignatureSpan">(propName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.componentFromStream">module recompose.componentFromStream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.componentFromStream.componentFromStream">
+            function <span class="apidocSignatureSpan">recompose.</span>componentFromStream
+            <span class="apidocSignatureSpan">(propsToVdom)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.compose">module recompose.compose</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.compose.compose">
+            function <span class="apidocSignatureSpan">recompose.</span>compose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.createEagerElement">module recompose.createEagerElement</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEagerElement.createEagerElement">
+            function <span class="apidocSignatureSpan">recompose.</span>createEagerElement
+            <span class="apidocSignatureSpan">(type, props, children)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.createEagerElementUtil">module recompose.createEagerElementUtil</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">recompose.createEagerElementUtil.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEagerElementUtil.default">
+            function <span class="apidocSignatureSpan">recompose.createEagerElementUtil.</span>default
+            <span class="apidocSignatureSpan">(hasKey, isReferentiallyTransparent, type, props, children)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.createEagerFactory">module recompose.createEagerFactory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEagerFactory.createEagerFactory">
+            function <span class="apidocSignatureSpan">recompose.</span>createEagerFactory
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.createEventHandler">module recompose.createEventHandler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createEventHandler.createEventHandler">
+            function <span class="apidocSignatureSpan">recompose.</span>createEventHandler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.createHelper">module recompose.createHelper</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">recompose.createHelper.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createHelper.default">
+            function <span class="apidocSignatureSpan">recompose.createHelper.</span>default
+            <span class="apidocSignatureSpan">(func, helperName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.createSink">module recompose.createSink</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.createSink.createSink">
+            function <span class="apidocSignatureSpan">recompose.</span>createSink
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.defaultProps">module recompose.defaultProps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.defaultProps.defaultProps">
+            function <span class="apidocSignatureSpan">recompose.</span>defaultProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.flattenProp">module recompose.flattenProp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.flattenProp.flattenProp">
+            function <span class="apidocSignatureSpan">recompose.</span>flattenProp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.getContext">module recompose.getContext</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.getContext.getContext">
+            function <span class="apidocSignatureSpan">recompose.</span>getContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.getDisplayName">module recompose.getDisplayName</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.getDisplayName.getDisplayName">
+            function <span class="apidocSignatureSpan">recompose.</span>getDisplayName
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.hoistStatics">module recompose.hoistStatics</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.hoistStatics.hoistStatics">
+            function <span class="apidocSignatureSpan">recompose.</span>hoistStatics
+            <span class="apidocSignatureSpan">(higherOrderComponent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.isClassComponent">module recompose.isClassComponent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.isClassComponent.isClassComponent">
+            function <span class="apidocSignatureSpan">recompose.</span>isClassComponent
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.isReferentiallyTransparentFunctionComponent">module recompose.isReferentiallyTransparentFunctionComponent</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">recompose.isReferentiallyTransparentFunctionComponent.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.isReferentiallyTransparentFunctionComponent.default">
+            function <span class="apidocSignatureSpan">recompose.isReferentiallyTransparentFunctionComponent.</span>default
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.lifecycle">module recompose.lifecycle</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.lifecycle.lifecycle">
+            function <span class="apidocSignatureSpan">recompose.</span>lifecycle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.mapProps">module recompose.mapProps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.mapProps.mapProps">
+            function <span class="apidocSignatureSpan">recompose.</span>mapProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.mapPropsStream">module recompose.mapPropsStream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.mapPropsStream.mapPropsStream">
+            function <span class="apidocSignatureSpan">recompose.</span>mapPropsStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.nest">module recompose.nest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.nest.nest">
+            function <span class="apidocSignatureSpan">recompose.</span>nest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.omit">module recompose.omit</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">recompose.omit.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.omit.default">
+            function <span class="apidocSignatureSpan">recompose.omit.</span>default
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.onlyUpdateForKeys">module recompose.onlyUpdateForKeys</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.onlyUpdateForKeys.onlyUpdateForKeys">
+            function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForKeys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.onlyUpdateForPropTypes">module recompose.onlyUpdateForPropTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.onlyUpdateForPropTypes.onlyUpdateForPropTypes">
+            function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForPropTypes
+            <span class="apidocSignatureSpan">(BaseComponent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.pick">module recompose.pick</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">recompose.pick.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.pick.default">
+            function <span class="apidocSignatureSpan">recompose.pick.</span>default
+            <span class="apidocSignatureSpan">(obj, keys)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.pure">module recompose.pure</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.pure.pure">
+            function <span class="apidocSignatureSpan">recompose.</span>pure
+            <span class="apidocSignatureSpan">(BaseComponent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.renameProp">module recompose.renameProp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renameProp.renameProp">
+            function <span class="apidocSignatureSpan">recompose.</span>renameProp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.renameProps">module recompose.renameProps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renameProps.renameProps">
+            function <span class="apidocSignatureSpan">recompose.</span>renameProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.renderComponent">module recompose.renderComponent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renderComponent.renderComponent">
+            function <span class="apidocSignatureSpan">recompose.</span>renderComponent
+            <span class="apidocSignatureSpan">(Component)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.renderNothing">module recompose.renderNothing</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.renderNothing.renderNothing">
+            function <span class="apidocSignatureSpan">recompose.</span>renderNothing
+            <span class="apidocSignatureSpan">(_)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.setDisplayName">module recompose.setDisplayName</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setDisplayName.setDisplayName">
+            function <span class="apidocSignatureSpan">recompose.</span>setDisplayName
+            <span class="apidocSignatureSpan">(displayName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.setObservableConfig">module recompose.setObservableConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setObservableConfig.setObservableConfig">
+            function <span class="apidocSignatureSpan">recompose.</span>setObservableConfig
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.setPropTypes">module recompose.setPropTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setPropTypes.setPropTypes">
+            function <span class="apidocSignatureSpan">recompose.</span>setPropTypes
+            <span class="apidocSignatureSpan">(propTypes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.setStatic">module recompose.setStatic</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.setStatic.setStatic">
+            function <span class="apidocSignatureSpan">recompose.</span>setStatic
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.shallowEqual">module recompose.shallowEqual</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.shallowEqual.shallowEqual">
+            function <span class="apidocSignatureSpan">recompose.</span>shallowEqual
+            <span class="apidocSignatureSpan">(objA, objB)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.shouldUpdate">module recompose.shouldUpdate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.shouldUpdate.shouldUpdate">
+            function <span class="apidocSignatureSpan">recompose.</span>shouldUpdate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.toClass">module recompose.toClass</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.toClass.toClass">
+            function <span class="apidocSignatureSpan">recompose.</span>toClass
+            <span class="apidocSignatureSpan">(baseComponent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.withContext">module recompose.withContext</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withContext.withContext">
+            function <span class="apidocSignatureSpan">recompose.</span>withContext
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.withHandlers">module recompose.withHandlers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withHandlers.withHandlers">
+            function <span class="apidocSignatureSpan">recompose.</span>withHandlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.withProps">module recompose.withProps</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withProps.withProps">
+            function <span class="apidocSignatureSpan">recompose.</span>withProps
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.withPropsOnChange">module recompose.withPropsOnChange</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withPropsOnChange.withPropsOnChange">
+            function <span class="apidocSignatureSpan">recompose.</span>withPropsOnChange
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.withReducer">module recompose.withReducer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withReducer.withReducer">
+            function <span class="apidocSignatureSpan">recompose.</span>withReducer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.withState">module recompose.withState</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.withState.withState">
+            function <span class="apidocSignatureSpan">recompose.</span>withState
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.recompose.wrapDisplayName">module recompose.wrapDisplayName</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.recompose.wrapDisplayName.wrapDisplayName">
+            function <span class="apidocSignatureSpan">recompose.</span>wrapDisplayName
+            <span class="apidocSignatureSpan">(BaseComponent, hocName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose" id="apidoc.module.recompose">module recompose</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.branch" id="apidoc.element.recompose.branch">
+        function <span class="apidocSignatureSpan">recompose.</span>branch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">branch = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.componentFromProp" id="apidoc.element.recompose.componentFromProp">
+        function <span class="apidocSignatureSpan">recompose.</span>componentFromProp
+        <span class="apidocSignatureSpan">(propName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentFromProp(propName) {
+  var Component = function Component(props) {
+    return (0, _createEagerElement2.default)(props[propName], (0, _omit2.default)(props, [propName]));
+  };
+  Component.displayName = &#x27;componentFromProp(&#x27; + propName + &#x27;)&#x27;;
+  return Component;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.componentFromStream" id="apidoc.element.recompose.componentFromStream">
+        function <span class="apidocSignatureSpan">recompose.</span>componentFromStream
+        <span class="apidocSignatureSpan">(propsToVdom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">componentFromStream = function (propsToVdom) {
+  return function (_Component) {
+    _inherits(ComponentFromStream, _Component);
+
+    function ComponentFromStream() {
+      var _config$fromESObserva;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, ComponentFromStream);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))),
+_this), _this.state = { vdom: null }, _this.propsEmitter = (0, _changeEmitter.createChangeEmitter)(), _this.props$ = config.fromESObservable
+((_config$fromESObserva = {
+        subscribe: function subscribe(observer) {
+          var unsubscribe = _this.propsEmitter.listen(function (props) {
+            if (props) {
+              observer.next(props);
+            } else {
+              observer.complete();
+            }
+          });
+          return { unsubscribe: unsubscribe };
+        }
+      }, _config$fromESObserva[_symbolObservable2.default] = function () {
+        return this;
+      }, _config$fromESObserva)), _this.vdom$ = config.toESObservable(propsToVdom(_this.props$)), _temp), _possibleConstructorReturn
+(_this, _ret);
+    }
+
+    // Stream of props
+
+
+    // Stream of vdom
+
+
+    ComponentFromStream.prototype.componentWillMount = function componentWillMount() {
+      var _this2 = this;
+
+      // Subscribe to child prop changes so we know when to re-render
+      this.subscription = this.vdom$.subscribe({
+        next: function next(vdom) {
+          _this2.setState({ vdom: vdom });
+        }
+      });
+      this.propsEmitter.emit(this.props);
+    };
+
+    ComponentFromStream.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      // Receive new props from the owner
+      this.propsEmitter.emit(nextProps);
+    };
+
+    ComponentFromStream.prototype.shouldComponentUpdate = function shouldComponentUpdate(nextProps, nextState) {
+      return nextState.vdom !== this.state.vdom;
+    };
+
+    ComponentFromStream.prototype.componentWillUnmount = function componentWillUnmount() {
+      // Call without arguments to complete stream
+      this.propsEmitter.emit();
+
+      // Clean-up subscription before un-mounting
+      this.subscription.unsubscribe();
+    };
+
+    ComponentFromStream.prototype.render = function render() {
+      return this.state.vdom;
+    };
+
+    return ComponentFromStream;
+  }(_react.Component);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.compose" id="apidoc.element.recompose.compose">
+        function <span class="apidocSignatureSpan">recompose.</span>compose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compose() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(undefined, arguments));
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEagerElement" id="apidoc.element.recompose.createEagerElement">
+        function <span class="apidocSignatureSpan">recompose.</span>createEagerElement
+        <span class="apidocSignatureSpan">(type, props, children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEagerElement(type, props, children) {
+  var isReferentiallyTransparent = (0, _isReferentiallyTransparentFunctionComponent2.default)(type);
+<span class="apidocCodeCommentSpan">  /* eslint-disable */
+</span>  var hasKey = props &#x26;&#x26; props.hasOwnProperty(&#x27;key&#x27;);
+  /* eslint-enable */
+  return (0, _createEagerElementUtil2.default)(hasKey, isReferentiallyTransparent, type, props, children);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEagerFactory" id="apidoc.element.recompose.createEagerFactory">
+        function <span class="apidocSignatureSpan">recompose.</span>createEagerFactory
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createFactory(type) {
+  var isReferentiallyTransparent = (0, _isReferentiallyTransparentFunctionComponent2.default)(type);
+  return function (p, c) {
+    return (0, _createEagerElementUtil2.default)(false, isReferentiallyTransparent, type, p, c);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEventHandler" id="apidoc.element.recompose.createEventHandler">
+        function <span class="apidocSignatureSpan">recompose.</span>createEventHandler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createEventHandler = function () {
+  var _config$fromESObserva;
+
+  var emitter = (0, _changeEmitter.createChangeEmitter)();
+  var stream = config.fromESObservable((_config$fromESObserva = {
+    subscribe: function subscribe(observer) {
+      var unsubscribe = emitter.listen(function (value) {
+        return observer.next(value);
+      });
+      return { unsubscribe: unsubscribe };
+    }
+  }, _config$fromESObserva[_symbolObservable2.default] = function () {
+    return this;
+  }, _config$fromESObserva));
+  return {
+    handler: emitter.emit,
+    stream: stream
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createSink" id="apidoc.element.recompose.createSink">
+        function <span class="apidocSignatureSpan">recompose.</span>createSink
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSink(callback) {
+  return function (_Component) {
+    _inherits(Sink, _Component);
+
+    function Sink() {
+      _classCallCheck(this, Sink);
+
+      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    Sink.prototype.componentWillMount = function componentWillMount() {
+      callback(this.props);
+    };
+
+    Sink.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      callback(nextProps);
+    };
+
+    Sink.prototype.render = function render() {
+      return null;
+    };
+
+    return Sink;
+  }(_react.Component);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.defaultProps" id="apidoc.element.recompose.defaultProps">
+        function <span class="apidocSignatureSpan">recompose.</span>defaultProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.flattenProp" id="apidoc.element.recompose.flattenProp">
+        function <span class="apidocSignatureSpan">recompose.</span>flattenProp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">flattenProp = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.getContext" id="apidoc.element.recompose.getContext">
+        function <span class="apidocSignatureSpan">recompose.</span>getContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContext = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.getDisplayName" id="apidoc.element.recompose.getDisplayName">
+        function <span class="apidocSignatureSpan">recompose.</span>getDisplayName
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDisplayName(Component) {
+  if (typeof Component === &#x27;string&#x27;) {
+    return Component;
+  }
+
+  if (!Component) {
+    return undefined;
+  }
+
+  return Component.displayName || Component.name || &#x27;Component&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.hoistStatics" id="apidoc.element.recompose.hoistStatics">
+        function <span class="apidocSignatureSpan">recompose.</span>hoistStatics
+        <span class="apidocSignatureSpan">(higherOrderComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hoistStatics(higherOrderComponent) {
+  return function (BaseComponent) {
+    var NewComponent = higherOrderComponent(BaseComponent);
+    (0, _hoistNonReactStatics2.default)(NewComponent, BaseComponent);
+    return NewComponent;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.isClassComponent" id="apidoc.element.recompose.isClassComponent">
+        function <span class="apidocSignatureSpan">recompose.</span>isClassComponent
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isClassComponent(Component) {
+  return Boolean(Component &#x26;&#x26; Component.prototype &#x26;&#x26; typeof Component.prototype.isReactComponent === &#x27;object&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.lifecycle" id="apidoc.element.recompose.lifecycle">
+        function <span class="apidocSignatureSpan">recompose.</span>lifecycle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lifecycle = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.mapProps" id="apidoc.element.recompose.mapProps">
+        function <span class="apidocSignatureSpan">recompose.</span>mapProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mapProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.mapPropsStream" id="apidoc.element.recompose.mapPropsStream">
+        function <span class="apidocSignatureSpan">recompose.</span>mapPropsStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mapPropsStream = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.nest" id="apidoc.element.recompose.nest">
+        function <span class="apidocSignatureSpan">recompose.</span>nest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nest() {
+  for (var _len = arguments.length, Components = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    Components[_key] = arguments[_key];
+  }
+
+  var factories = Components.map(_createEagerFactory2.default);
+  var Nest = function Nest(_ref) {
+    var props = _objectWithoutProperties(_ref, []),
+        children = _ref.children;
+
+    return factories.reduceRight(function (child, factory) {
+      return factory(props, child);
+    }, children);
+  };
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    var displayNames = Components.map(_getDisplayName2.default);
+    Nest.displayName = &#x27;nest(&#x27; + displayNames.join(&#x27;, &#x27;) + &#x27;)&#x27;;
+  }
+
+  return Nest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.onlyUpdateForKeys" id="apidoc.element.recompose.onlyUpdateForKeys">
+        function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForKeys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onlyUpdateForKeys = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.onlyUpdateForPropTypes" id="apidoc.element.recompose.onlyUpdateForPropTypes">
+        function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForPropTypes
+        <span class="apidocSignatureSpan">(BaseComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onlyUpdateForPropTypes = function (BaseComponent) {
+  var Component = func(BaseComponent);
+  Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+  return Component;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.pure" id="apidoc.element.recompose.pure">
+        function <span class="apidocSignatureSpan">recompose.</span>pure
+        <span class="apidocSignatureSpan">(BaseComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pure = function (BaseComponent) {
+  var Component = func(BaseComponent);
+  Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+  return Component;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renameProp" id="apidoc.element.recompose.renameProp">
+        function <span class="apidocSignatureSpan">recompose.</span>renameProp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renameProp = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renameProps" id="apidoc.element.recompose.renameProps">
+        function <span class="apidocSignatureSpan">recompose.</span>renameProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renameProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renderComponent" id="apidoc.element.recompose.renderComponent">
+        function <span class="apidocSignatureSpan">recompose.</span>renderComponent
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderComponent(Component) {
+  return function (_) {
+    var factory = (0, _createEagerFactory2.default)(Component);
+    var RenderComponent = function RenderComponent(props) {
+      return factory(props);
+    };
+    if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+      RenderComponent.displayName = (0, _wrapDisplayName2.default)(Component, &#x27;renderComponent&#x27;);
+    }
+    return RenderComponent;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renderNothing" id="apidoc.element.recompose.renderNothing">
+        function <span class="apidocSignatureSpan">recompose.</span>renderNothing
+        <span class="apidocSignatureSpan">(_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderNothing(_) {
+  return Nothing;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setDisplayName" id="apidoc.element.recompose.setDisplayName">
+        function <span class="apidocSignatureSpan">recompose.</span>setDisplayName
+        <span class="apidocSignatureSpan">(displayName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setDisplayName(displayName) {
+  return (0, _setStatic2.default)(&#x27;displayName&#x27;, displayName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setObservableConfig" id="apidoc.element.recompose.setObservableConfig">
+        function <span class="apidocSignatureSpan">recompose.</span>setObservableConfig
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function configureObservable(c) {
+  _config = c;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setPropTypes" id="apidoc.element.recompose.setPropTypes">
+        function <span class="apidocSignatureSpan">recompose.</span>setPropTypes
+        <span class="apidocSignatureSpan">(propTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPropTypes(propTypes) {
+  return (0, _setStatic2.default)(&#x27;propTypes&#x27;, propTypes);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setStatic" id="apidoc.element.recompose.setStatic">
+        function <span class="apidocSignatureSpan">recompose.</span>setStatic
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setStatic(key, value) {
+  return function (BaseComponent) {
+<span class="apidocCodeCommentSpan">    /* eslint-disable no-param-reassign */
+</span>    BaseComponent[key] = value;
+    /* eslint-enable no-param-reassign */
+    return BaseComponent;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.shallowEqual" id="apidoc.element.recompose.shallowEqual">
+        function <span class="apidocSignatureSpan">recompose.</span>shallowEqual
+        <span class="apidocSignatureSpan">(objA, objB)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shallowEqual(objA, objB) {
+  if (is(objA, objB)) {
+    return true;
+  }
+
+  if (typeof objA !== &#x27;object&#x27; || objA === null || typeof objB !== &#x27;object&#x27; || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  // Test for A&#x27;s keys different from B.
+  for (var i = 0; i &#x3c; keysA.length; i++) {
+    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.shouldUpdate" id="apidoc.element.recompose.shouldUpdate">
+        function <span class="apidocSignatureSpan">recompose.</span>shouldUpdate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shouldUpdate = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.toClass" id="apidoc.element.recompose.toClass">
+        function <span class="apidocSignatureSpan">recompose.</span>toClass
+        <span class="apidocSignatureSpan">(baseComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toClass(baseComponent) {
+  if ((0, _isClassComponent2.default)(baseComponent)) {
+    return baseComponent;
+  }
+
+  var ToClass = function (_Component) {
+    _inherits(ToClass, _Component);
+
+    function ToClass() {
+      _classCallCheck(this, ToClass);
+
+      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    ToClass.prototype.render = function render() {
+      if (typeof baseComponent === &#x27;string&#x27;) {
+        return _react2.default.createElement(baseComponent, this.props);
+      }
+      return baseComponent(this.props, this.context);
+    };
+
+    return ToClass;
+  }(_react.Component);
+
+  ToClass.displayName = (0, _getDisplayName2.default)(baseComponent);
+  ToClass.propTypes = baseComponent.propTypes;
+  ToClass.contextTypes = baseComponent.contextTypes;
+  ToClass.defaultProps = baseComponent.defaultProps;
+
+  return ToClass;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withContext" id="apidoc.element.recompose.withContext">
+        function <span class="apidocSignatureSpan">recompose.</span>withContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withContext = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withHandlers" id="apidoc.element.recompose.withHandlers">
+        function <span class="apidocSignatureSpan">recompose.</span>withHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withHandlers = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withProps" id="apidoc.element.recompose.withProps">
+        function <span class="apidocSignatureSpan">recompose.</span>withProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withPropsOnChange" id="apidoc.element.recompose.withPropsOnChange">
+        function <span class="apidocSignatureSpan">recompose.</span>withPropsOnChange
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withPropsOnChange = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withReducer" id="apidoc.element.recompose.withReducer">
+        function <span class="apidocSignatureSpan">recompose.</span>withReducer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withReducer = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withState" id="apidoc.element.recompose.withState">
+        function <span class="apidocSignatureSpan">recompose.</span>withState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withState = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.wrapDisplayName" id="apidoc.element.recompose.wrapDisplayName">
+        function <span class="apidocSignatureSpan">recompose.</span>wrapDisplayName
+        <span class="apidocSignatureSpan">(BaseComponent, hocName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapDisplayName(BaseComponent, hocName) {
+  return hocName + &#x27;(&#x27; + (0, _getDisplayName2.default)(BaseComponent) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.branch" id="apidoc.module.recompose.branch">module recompose.branch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.branch.branch" id="apidoc.element.recompose.branch.branch">
+        function <span class="apidocSignatureSpan">recompose.</span>branch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">branch = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.componentFromProp" id="apidoc.module.recompose.componentFromProp">module recompose.componentFromProp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.componentFromProp.componentFromProp" id="apidoc.element.recompose.componentFromProp.componentFromProp">
+        function <span class="apidocSignatureSpan">recompose.</span>componentFromProp
+        <span class="apidocSignatureSpan">(propName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function componentFromProp(propName) {
+  var Component = function Component(props) {
+    return (0, _createEagerElement2.default)(props[propName], (0, _omit2.default)(props, [propName]));
+  };
+  Component.displayName = &#x27;componentFromProp(&#x27; + propName + &#x27;)&#x27;;
+  return Component;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.componentFromStream" id="apidoc.module.recompose.componentFromStream">module recompose.componentFromStream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.componentFromStream.componentFromStream" id="apidoc.element.recompose.componentFromStream.componentFromStream">
+        function <span class="apidocSignatureSpan">recompose.</span>componentFromStream
+        <span class="apidocSignatureSpan">(propsToVdom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">componentFromStream = function (propsToVdom) {
+  return function (_Component) {
+    _inherits(ComponentFromStream, _Component);
+
+    function ComponentFromStream() {
+      var _config$fromESObserva;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, ComponentFromStream);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))),
+_this), _this.state = { vdom: null }, _this.propsEmitter = (0, _changeEmitter.createChangeEmitter)(), _this.props$ = config.fromESObservable
+((_config$fromESObserva = {
+        subscribe: function subscribe(observer) {
+          var unsubscribe = _this.propsEmitter.listen(function (props) {
+            if (props) {
+              observer.next(props);
+            } else {
+              observer.complete();
+            }
+          });
+          return { unsubscribe: unsubscribe };
+        }
+      }, _config$fromESObserva[_symbolObservable2.default] = function () {
+        return this;
+      }, _config$fromESObserva)), _this.vdom$ = config.toESObservable(propsToVdom(_this.props$)), _temp), _possibleConstructorReturn
+(_this, _ret);
+    }
+
+    // Stream of props
+
+
+    // Stream of vdom
+
+
+    ComponentFromStream.prototype.componentWillMount = function componentWillMount() {
+      var _this2 = this;
+
+      // Subscribe to child prop changes so we know when to re-render
+      this.subscription = this.vdom$.subscribe({
+        next: function next(vdom) {
+          _this2.setState({ vdom: vdom });
+        }
+      });
+      this.propsEmitter.emit(this.props);
+    };
+
+    ComponentFromStream.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      // Receive new props from the owner
+      this.propsEmitter.emit(nextProps);
+    };
+
+    ComponentFromStream.prototype.shouldComponentUpdate = function shouldComponentUpdate(nextProps, nextState) {
+      return nextState.vdom !== this.state.vdom;
+    };
+
+    ComponentFromStream.prototype.componentWillUnmount = function componentWillUnmount() {
+      // Call without arguments to complete stream
+      this.propsEmitter.emit();
+
+      // Clean-up subscription before un-mounting
+      this.subscription.unsubscribe();
+    };
+
+    ComponentFromStream.prototype.render = function render() {
+      return this.state.vdom;
+    };
+
+    return ComponentFromStream;
+  }(_react.Component);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.compose" id="apidoc.module.recompose.compose">module recompose.compose</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.compose.compose" id="apidoc.element.recompose.compose.compose">
+        function <span class="apidocSignatureSpan">recompose.</span>compose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compose() {
+  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(undefined, arguments));
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.createEagerElement" id="apidoc.module.recompose.createEagerElement">module recompose.createEagerElement</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEagerElement.createEagerElement" id="apidoc.element.recompose.createEagerElement.createEagerElement">
+        function <span class="apidocSignatureSpan">recompose.</span>createEagerElement
+        <span class="apidocSignatureSpan">(type, props, children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEagerElement(type, props, children) {
+  var isReferentiallyTransparent = (0, _isReferentiallyTransparentFunctionComponent2.default)(type);
+<span class="apidocCodeCommentSpan">  /* eslint-disable */
+</span>  var hasKey = props &#x26;&#x26; props.hasOwnProperty(&#x27;key&#x27;);
+  /* eslint-enable */
+  return (0, _createEagerElementUtil2.default)(hasKey, isReferentiallyTransparent, type, props, children);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.createEagerElementUtil" id="apidoc.module.recompose.createEagerElementUtil">module recompose.createEagerElementUtil</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEagerElementUtil.default" id="apidoc.element.recompose.createEagerElementUtil.default">
+        function <span class="apidocSignatureSpan">recompose.createEagerElementUtil.</span>default
+        <span class="apidocSignatureSpan">(hasKey, isReferentiallyTransparent, type, props, children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEagerElementUtil(hasKey, isReferentiallyTransparent, type, props, children) {
+  if (!hasKey &#x26;&#x26; isReferentiallyTransparent) {
+    if (children) {
+      return type(_extends({}, props, { children: children }));
+    }
+    return type(props);
+  }
+
+  var Component = type;
+
+  if (children) {
+    return _react2.default.createElement(
+      Component,
+      props,
+      children
+    );
+  }
+
+  return _react2.default.createElement(Component, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.createEagerFactory" id="apidoc.module.recompose.createEagerFactory">module recompose.createEagerFactory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEagerFactory.createEagerFactory" id="apidoc.element.recompose.createEagerFactory.createEagerFactory">
+        function <span class="apidocSignatureSpan">recompose.</span>createEagerFactory
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createFactory(type) {
+  var isReferentiallyTransparent = (0, _isReferentiallyTransparentFunctionComponent2.default)(type);
+  return function (p, c) {
+    return (0, _createEagerElementUtil2.default)(false, isReferentiallyTransparent, type, p, c);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.createEventHandler" id="apidoc.module.recompose.createEventHandler">module recompose.createEventHandler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createEventHandler.createEventHandler" id="apidoc.element.recompose.createEventHandler.createEventHandler">
+        function <span class="apidocSignatureSpan">recompose.</span>createEventHandler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createEventHandler = function () {
+  var _config$fromESObserva;
+
+  var emitter = (0, _changeEmitter.createChangeEmitter)();
+  var stream = config.fromESObservable((_config$fromESObserva = {
+    subscribe: function subscribe(observer) {
+      var unsubscribe = emitter.listen(function (value) {
+        return observer.next(value);
+      });
+      return { unsubscribe: unsubscribe };
+    }
+  }, _config$fromESObserva[_symbolObservable2.default] = function () {
+    return this;
+  }, _config$fromESObserva));
+  return {
+    handler: emitter.emit,
+    stream: stream
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.createHelper" id="apidoc.module.recompose.createHelper">module recompose.createHelper</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createHelper.default" id="apidoc.element.recompose.createHelper.default">
+        function <span class="apidocSignatureSpan">recompose.createHelper.</span>default
+        <span class="apidocSignatureSpan">(func, helperName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createHelper(func, helperName) {
+  var setDisplayName = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : true;
+  var noArgs = arguments.length &#x3e; 3 &#x26;&#x26; arguments[3] !== undefined ? arguments[3] : false;
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27; &#x26;&#x26; setDisplayName) {
+    if (noArgs) {
+      return function (BaseComponent) {
+        var Component = func(BaseComponent);
+        Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+        return Component;
+      };
+    }
+
+    return function () {
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return function (BaseComponent) {
+        var Component = func.apply(undefined, args)(BaseComponent);
+        Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+        return Component;
+      };
+    };
+  }
+
+  return func;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.createSink" id="apidoc.module.recompose.createSink">module recompose.createSink</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.createSink.createSink" id="apidoc.element.recompose.createSink.createSink">
+        function <span class="apidocSignatureSpan">recompose.</span>createSink
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSink(callback) {
+  return function (_Component) {
+    _inherits(Sink, _Component);
+
+    function Sink() {
+      _classCallCheck(this, Sink);
+
+      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    Sink.prototype.componentWillMount = function componentWillMount() {
+      callback(this.props);
+    };
+
+    Sink.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      callback(nextProps);
+    };
+
+    Sink.prototype.render = function render() {
+      return null;
+    };
+
+    return Sink;
+  }(_react.Component);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.defaultProps" id="apidoc.module.recompose.defaultProps">module recompose.defaultProps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.defaultProps.defaultProps" id="apidoc.element.recompose.defaultProps.defaultProps">
+        function <span class="apidocSignatureSpan">recompose.</span>defaultProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.flattenProp" id="apidoc.module.recompose.flattenProp">module recompose.flattenProp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.flattenProp.flattenProp" id="apidoc.element.recompose.flattenProp.flattenProp">
+        function <span class="apidocSignatureSpan">recompose.</span>flattenProp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">flattenProp = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.getContext" id="apidoc.module.recompose.getContext">module recompose.getContext</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.getContext.getContext" id="apidoc.element.recompose.getContext.getContext">
+        function <span class="apidocSignatureSpan">recompose.</span>getContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getContext = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.getDisplayName" id="apidoc.module.recompose.getDisplayName">module recompose.getDisplayName</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.getDisplayName.getDisplayName" id="apidoc.element.recompose.getDisplayName.getDisplayName">
+        function <span class="apidocSignatureSpan">recompose.</span>getDisplayName
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDisplayName(Component) {
+  if (typeof Component === &#x27;string&#x27;) {
+    return Component;
+  }
+
+  if (!Component) {
+    return undefined;
+  }
+
+  return Component.displayName || Component.name || &#x27;Component&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.hoistStatics" id="apidoc.module.recompose.hoistStatics">module recompose.hoistStatics</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.hoistStatics.hoistStatics" id="apidoc.element.recompose.hoistStatics.hoistStatics">
+        function <span class="apidocSignatureSpan">recompose.</span>hoistStatics
+        <span class="apidocSignatureSpan">(higherOrderComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hoistStatics(higherOrderComponent) {
+  return function (BaseComponent) {
+    var NewComponent = higherOrderComponent(BaseComponent);
+    (0, _hoistNonReactStatics2.default)(NewComponent, BaseComponent);
+    return NewComponent;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.isClassComponent" id="apidoc.module.recompose.isClassComponent">module recompose.isClassComponent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.isClassComponent.isClassComponent" id="apidoc.element.recompose.isClassComponent.isClassComponent">
+        function <span class="apidocSignatureSpan">recompose.</span>isClassComponent
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isClassComponent(Component) {
+  return Boolean(Component &#x26;&#x26; Component.prototype &#x26;&#x26; typeof Component.prototype.isReactComponent === &#x27;object&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.isReferentiallyTransparentFunctionComponent" id="apidoc.module.recompose.isReferentiallyTransparentFunctionComponent">module recompose.isReferentiallyTransparentFunctionComponent</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.isReferentiallyTransparentFunctionComponent.default" id="apidoc.element.recompose.isReferentiallyTransparentFunctionComponent.default">
+        function <span class="apidocSignatureSpan">recompose.isReferentiallyTransparentFunctionComponent.</span>default
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isReferentiallyTransparentFunctionComponent(Component) {
+  return Boolean(typeof Component === &#x27;function&#x27; &#x26;&#x26; !(0, _isClassComponent2.default)(Component) &#x26;&#x26; !Component.defaultProps &#x26;&#x26; !Component
+.contextTypes &#x26;&#x26; (process.env.NODE_ENV === &#x27;production&#x27; || !Component.propTypes));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.lifecycle" id="apidoc.module.recompose.lifecycle">module recompose.lifecycle</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.lifecycle.lifecycle" id="apidoc.element.recompose.lifecycle.lifecycle">
+        function <span class="apidocSignatureSpan">recompose.</span>lifecycle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lifecycle = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.mapProps" id="apidoc.module.recompose.mapProps">module recompose.mapProps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.mapProps.mapProps" id="apidoc.element.recompose.mapProps.mapProps">
+        function <span class="apidocSignatureSpan">recompose.</span>mapProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mapProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.mapPropsStream" id="apidoc.module.recompose.mapPropsStream">module recompose.mapPropsStream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.mapPropsStream.mapPropsStream" id="apidoc.element.recompose.mapPropsStream.mapPropsStream">
+        function <span class="apidocSignatureSpan">recompose.</span>mapPropsStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mapPropsStream = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.nest" id="apidoc.module.recompose.nest">module recompose.nest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.nest.nest" id="apidoc.element.recompose.nest.nest">
+        function <span class="apidocSignatureSpan">recompose.</span>nest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nest() {
+  for (var _len = arguments.length, Components = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    Components[_key] = arguments[_key];
+  }
+
+  var factories = Components.map(_createEagerFactory2.default);
+  var Nest = function Nest(_ref) {
+    var props = _objectWithoutProperties(_ref, []),
+        children = _ref.children;
+
+    return factories.reduceRight(function (child, factory) {
+      return factory(props, child);
+    }, children);
+  };
+
+  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+    var displayNames = Components.map(_getDisplayName2.default);
+    Nest.displayName = &#x27;nest(&#x27; + displayNames.join(&#x27;, &#x27;) + &#x27;)&#x27;;
+  }
+
+  return Nest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.omit" id="apidoc.module.recompose.omit">module recompose.omit</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.omit.default" id="apidoc.element.recompose.omit.default">
+        function <span class="apidocSignatureSpan">recompose.omit.</span>default
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function omit(obj, keys) {
+  var rest = _objectWithoutProperties(obj, []);
+
+  for (var i = 0; i &#x3c; keys.length; i++) {
+    var key = keys[i];
+    if (rest.hasOwnProperty(key)) {
+      delete rest[key];
+    }
+  }
+  return rest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.onlyUpdateForKeys" id="apidoc.module.recompose.onlyUpdateForKeys">module recompose.onlyUpdateForKeys</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.onlyUpdateForKeys.onlyUpdateForKeys" id="apidoc.element.recompose.onlyUpdateForKeys.onlyUpdateForKeys">
+        function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForKeys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onlyUpdateForKeys = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.onlyUpdateForPropTypes" id="apidoc.module.recompose.onlyUpdateForPropTypes">module recompose.onlyUpdateForPropTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.onlyUpdateForPropTypes.onlyUpdateForPropTypes" id="apidoc.element.recompose.onlyUpdateForPropTypes.onlyUpdateForPropTypes">
+        function <span class="apidocSignatureSpan">recompose.</span>onlyUpdateForPropTypes
+        <span class="apidocSignatureSpan">(BaseComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onlyUpdateForPropTypes = function (BaseComponent) {
+  var Component = func(BaseComponent);
+  Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+  return Component;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.pick" id="apidoc.module.recompose.pick">module recompose.pick</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.pick.default" id="apidoc.element.recompose.pick.default">
+        function <span class="apidocSignatureSpan">recompose.pick.</span>default
+        <span class="apidocSignatureSpan">(obj, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pick(obj, keys) {
+  var result = {};
+  for (var i = 0; i &#x3c; keys.length; i++) {
+    var key = keys[i];
+    if (obj.hasOwnProperty(key)) {
+      result[key] = obj[key];
+    }
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.pure" id="apidoc.module.recompose.pure">module recompose.pure</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.pure.pure" id="apidoc.element.recompose.pure.pure">
+        function <span class="apidocSignatureSpan">recompose.</span>pure
+        <span class="apidocSignatureSpan">(BaseComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pure = function (BaseComponent) {
+  var Component = func(BaseComponent);
+  Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+  return Component;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.renameProp" id="apidoc.module.recompose.renameProp">module recompose.renameProp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renameProp.renameProp" id="apidoc.element.recompose.renameProp.renameProp">
+        function <span class="apidocSignatureSpan">recompose.</span>renameProp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renameProp = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.renameProps" id="apidoc.module.recompose.renameProps">module recompose.renameProps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renameProps.renameProps" id="apidoc.element.recompose.renameProps.renameProps">
+        function <span class="apidocSignatureSpan">recompose.</span>renameProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renameProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.renderComponent" id="apidoc.module.recompose.renderComponent">module recompose.renderComponent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renderComponent.renderComponent" id="apidoc.element.recompose.renderComponent.renderComponent">
+        function <span class="apidocSignatureSpan">recompose.</span>renderComponent
+        <span class="apidocSignatureSpan">(Component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderComponent(Component) {
+  return function (_) {
+    var factory = (0, _createEagerFactory2.default)(Component);
+    var RenderComponent = function RenderComponent(props) {
+      return factory(props);
+    };
+    if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+      RenderComponent.displayName = (0, _wrapDisplayName2.default)(Component, &#x27;renderComponent&#x27;);
+    }
+    return RenderComponent;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.renderNothing" id="apidoc.module.recompose.renderNothing">module recompose.renderNothing</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.renderNothing.renderNothing" id="apidoc.element.recompose.renderNothing.renderNothing">
+        function <span class="apidocSignatureSpan">recompose.</span>renderNothing
+        <span class="apidocSignatureSpan">(_)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function renderNothing(_) {
+  return Nothing;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.setDisplayName" id="apidoc.module.recompose.setDisplayName">module recompose.setDisplayName</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setDisplayName.setDisplayName" id="apidoc.element.recompose.setDisplayName.setDisplayName">
+        function <span class="apidocSignatureSpan">recompose.</span>setDisplayName
+        <span class="apidocSignatureSpan">(displayName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setDisplayName(displayName) {
+  return (0, _setStatic2.default)(&#x27;displayName&#x27;, displayName);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.setObservableConfig" id="apidoc.module.recompose.setObservableConfig">module recompose.setObservableConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setObservableConfig.setObservableConfig" id="apidoc.element.recompose.setObservableConfig.setObservableConfig">
+        function <span class="apidocSignatureSpan">recompose.</span>setObservableConfig
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function configureObservable(c) {
+  _config = c;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.setPropTypes" id="apidoc.module.recompose.setPropTypes">module recompose.setPropTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setPropTypes.setPropTypes" id="apidoc.element.recompose.setPropTypes.setPropTypes">
+        function <span class="apidocSignatureSpan">recompose.</span>setPropTypes
+        <span class="apidocSignatureSpan">(propTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPropTypes(propTypes) {
+  return (0, _setStatic2.default)(&#x27;propTypes&#x27;, propTypes);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.setStatic" id="apidoc.module.recompose.setStatic">module recompose.setStatic</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.setStatic.setStatic" id="apidoc.element.recompose.setStatic.setStatic">
+        function <span class="apidocSignatureSpan">recompose.</span>setStatic
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setStatic(key, value) {
+  return function (BaseComponent) {
+<span class="apidocCodeCommentSpan">    /* eslint-disable no-param-reassign */
+</span>    BaseComponent[key] = value;
+    /* eslint-enable no-param-reassign */
+    return BaseComponent;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.shallowEqual" id="apidoc.module.recompose.shallowEqual">module recompose.shallowEqual</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.shallowEqual.shallowEqual" id="apidoc.element.recompose.shallowEqual.shallowEqual">
+        function <span class="apidocSignatureSpan">recompose.</span>shallowEqual
+        <span class="apidocSignatureSpan">(objA, objB)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function shallowEqual(objA, objB) {
+  if (is(objA, objB)) {
+    return true;
+  }
+
+  if (typeof objA !== &#x27;object&#x27; || objA === null || typeof objB !== &#x27;object&#x27; || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  // Test for A&#x27;s keys different from B.
+  for (var i = 0; i &#x3c; keysA.length; i++) {
+    if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.shouldUpdate" id="apidoc.module.recompose.shouldUpdate">module recompose.shouldUpdate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.shouldUpdate.shouldUpdate" id="apidoc.element.recompose.shouldUpdate.shouldUpdate">
+        function <span class="apidocSignatureSpan">recompose.</span>shouldUpdate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shouldUpdate = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.toClass" id="apidoc.module.recompose.toClass">module recompose.toClass</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.toClass.toClass" id="apidoc.element.recompose.toClass.toClass">
+        function <span class="apidocSignatureSpan">recompose.</span>toClass
+        <span class="apidocSignatureSpan">(baseComponent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toClass(baseComponent) {
+  if ((0, _isClassComponent2.default)(baseComponent)) {
+    return baseComponent;
+  }
+
+  var ToClass = function (_Component) {
+    _inherits(ToClass, _Component);
+
+    function ToClass() {
+      _classCallCheck(this, ToClass);
+
+      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+    }
+
+    ToClass.prototype.render = function render() {
+      if (typeof baseComponent === &#x27;string&#x27;) {
+        return _react2.default.createElement(baseComponent, this.props);
+      }
+      return baseComponent(this.props, this.context);
+    };
+
+    return ToClass;
+  }(_react.Component);
+
+  ToClass.displayName = (0, _getDisplayName2.default)(baseComponent);
+  ToClass.propTypes = baseComponent.propTypes;
+  ToClass.contextTypes = baseComponent.contextTypes;
+  ToClass.defaultProps = baseComponent.defaultProps;
+
+  return ToClass;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.withContext" id="apidoc.module.recompose.withContext">module recompose.withContext</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withContext.withContext" id="apidoc.element.recompose.withContext.withContext">
+        function <span class="apidocSignatureSpan">recompose.</span>withContext
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withContext = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.withHandlers" id="apidoc.module.recompose.withHandlers">module recompose.withHandlers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withHandlers.withHandlers" id="apidoc.element.recompose.withHandlers.withHandlers">
+        function <span class="apidocSignatureSpan">recompose.</span>withHandlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withHandlers = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.withProps" id="apidoc.module.recompose.withProps">module recompose.withProps</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withProps.withProps" id="apidoc.element.recompose.withProps.withProps">
+        function <span class="apidocSignatureSpan">recompose.</span>withProps
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withProps = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.withPropsOnChange" id="apidoc.module.recompose.withPropsOnChange">module recompose.withPropsOnChange</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withPropsOnChange.withPropsOnChange" id="apidoc.element.recompose.withPropsOnChange.withPropsOnChange">
+        function <span class="apidocSignatureSpan">recompose.</span>withPropsOnChange
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withPropsOnChange = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.withReducer" id="apidoc.module.recompose.withReducer">module recompose.withReducer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withReducer.withReducer" id="apidoc.element.recompose.withReducer.withReducer">
+        function <span class="apidocSignatureSpan">recompose.</span>withReducer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withReducer = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.withState" id="apidoc.module.recompose.withState">module recompose.withState</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.withState.withState" id="apidoc.element.recompose.withState.withState">
+        function <span class="apidocSignatureSpan">recompose.</span>withState
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withState = function () {
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return function (BaseComponent) {
+    var Component = func.apply(undefined, args)(BaseComponent);
+    Component.displayName = (0, _wrapDisplayName2.default)(BaseComponent, helperName);
+    return Component;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.recompose.wrapDisplayName" id="apidoc.module.recompose.wrapDisplayName">module recompose.wrapDisplayName</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.recompose.wrapDisplayName.wrapDisplayName" id="apidoc.element.recompose.wrapDisplayName.wrapDisplayName">
+        function <span class="apidocSignatureSpan">recompose.</span>wrapDisplayName
+        <span class="apidocSignatureSpan">(BaseComponent, hocName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapDisplayName(BaseComponent, hocName) {
+  return hocName + &#x27;(&#x27; + (0, _getDisplayName2.default)(BaseComponent) + &#x27;)&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
